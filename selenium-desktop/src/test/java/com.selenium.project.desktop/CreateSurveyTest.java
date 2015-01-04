@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Selenium1 {
+public class CreateSurveyTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
