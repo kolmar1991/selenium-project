@@ -20,7 +20,7 @@ public class CreateSurveyTest {
   }
 
   @Test
-  public void testSelenium1() throws Exception {
+  public void createSurvey() throws Exception {
     driver.get(baseUrl + "/~kolaczyk/Survey/createSurveyStep1.php");
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("test");

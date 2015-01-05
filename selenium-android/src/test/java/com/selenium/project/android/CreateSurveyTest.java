@@ -19,7 +19,7 @@ public class CreateSurveyTest {
   private String baseUrl = "http://student.agh.edu.pl/";
 
   @Test
-  public void testSelenium1() {
+  public void createSurvey() {
       driver.get(baseUrl + "/~kolaczyk/Survey/createSurveyStep1.php");
       driver.findElement(By.name("name")).clear();
       driver.findElement(By.name("name")).sendKeys("test");

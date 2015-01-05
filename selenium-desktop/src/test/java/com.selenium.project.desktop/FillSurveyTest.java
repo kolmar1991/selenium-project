@@ -23,7 +23,7 @@ public class FillSurveyTest {
   }
 
   @Test
-  public void testSelenium2() throws Exception {
+  public void fillSurvey() throws Exception {
     driver.get(baseUrl + "/~kolaczyk/Survey/fillSurvey.php?surveyID=3");
     assertEquals("Witamy w systamie.", driver.findElement(By.cssSelector("div.panel-heading")).getText());
     driver.findElement(By.cssSelector("input.btn.btn-success")).click();
