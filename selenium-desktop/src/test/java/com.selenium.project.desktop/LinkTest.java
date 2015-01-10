@@ -2,12 +2,10 @@ package com.selenium.project.desktop;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.google.common.collect.ImmutableList;
-import com.selenium.project.desktop.model.ActionType;
 import com.selenium.project.desktop.model.LinkTestObject;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -16,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.selenium.project.desktop.model.ActionType.*;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 public class LinkTest {
     private WebDriver driver;
@@ -38,8 +35,8 @@ public class LinkTest {
 
     @Test
     public void testLinks() throws Exception {
-        for(LinkTestObject linkTestObject : linkList){
-            switch (linkTestObject.getAction()){
+        for (LinkTestObject linkTestObject : linkList) {
+            switch (linkTestObject.getAction()) {
                 case EXISTS:
                     isPageExists(linkTestObject.getDestination());
                     break;
@@ -65,8 +62,8 @@ public class LinkTest {
     }
 
     private void assertRedirection(String link, String exectedRedirection) {
-        driver.get(baseUrl+link);
-        assertEquals(driver.getCurrentUrl(), baseUrl+exectedRedirection);
+        driver.get(baseUrl + link);
+        assertEquals(driver.getCurrentUrl(), baseUrl + exectedRedirection);
     }
 
     private int getStatusCode(String link) throws IOException {
