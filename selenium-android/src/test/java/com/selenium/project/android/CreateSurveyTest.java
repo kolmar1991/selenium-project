@@ -11,6 +11,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.concurrent.TimeUnit;
+
 import static org.junit.Assert.assertEquals;
 
 public class CreateSurveyTest {
@@ -65,6 +67,7 @@ public class CreateSurveyTest {
     DesiredCapabilities caps = SelendroidCapabilities.android();
 
     driver = new SelendroidDriver(caps);
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @After

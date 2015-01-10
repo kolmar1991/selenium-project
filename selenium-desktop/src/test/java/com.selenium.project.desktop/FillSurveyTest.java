@@ -1,4 +1,4 @@
-package com.selenium.project;
+package com.selenium.project.desktop;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
